@@ -23,7 +23,7 @@ public class ShoppingCart {
             throw new IllegalArgumentException("Количество товара должно быть больше 0");
         }
         if (!catalog.containsKey(productId)) {
-            throw new IllegalArgumentException("Товар в каталоге не найден");
+            throw new IllegalArgumentException("Товар не найден в каталоге");
         }
         Product product = catalog.get(productId);
         int currentInCart = items.containsKey(productId) ? items.get(productId) : 0;
